@@ -1,79 +1,69 @@
 <!DOCTYPE html>
-<html>
-
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FalconLink</title>
-  <link rel="shortcut icon" content="favicon.ico" />
+  <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/global/navbar.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="w3.css">
+  <script src="uv/uv.bundle.js" defer></script>
+  <script src="uv/uv.config.js" defer></script>
+  <script src="register-sw.js" defer></script>
+  <script src="search.js" defer></script>
+  <script src="index.js" defer></script>
+  <script type="application/ld+json" defer></script>
+  <script src="global/all.js" defer></script>
+  <script src="tabs.js" defer></script>
 </head>
-<link rel="stylesheet" href="/global/navbar.css" />
-<link rel="stylesheet" href="index.css" />
-<link rel="stylesheet" href="w3.css">
-<script src="uv/uv.bundle.js" defer></script>
-<script src="uv/uv.config.js" defer></script>
-<script src="register-sw.js" defer></script>
-<script src="search.js" defer></script>
-<script src="index.js" defer></script>
-<script type="application/ld+json" defer></script>
-<script src="global/all.js" defer></script>
-<script src="tabs.js" defer></script>
-</head>
-
 <body onload="load()">
   <div style="display: none" id="myDiv">
-  <div id="proxy-div" class="hide-proxy-div">
-    <div id="proxy-nav-bar" class="w3-bar">
-      <div class="w3-bar-item w3-bar" id="tabBarTabs">
-        
+    <div id="proxy-div" class="hide-proxy-div">
+      <div id="proxy-nav-bar" class="w3-bar">
+        <div class="w3-bar-item w3-bar" id="tabBarTabs"></div>
+        <div class="w3-bar-item w3-display-container" id="newTab" onclick="newTab()">
+          <i class="material-icons w3-display-middle">add</i>
+        </div>
+        <div class="w3-bar-item" style="float: right; cursor: pointer; padding: 8px" onclick="goHome();">
+          <i class="material-icons">home</i>
+        </div>
       </div>
-      <div class="w3-bar-item w3-display-container" id="newTab" onclick="newTab()">
-        <i class="material-icons w3-display-middle">add</i>
-      </div>
-
-      <div class="w3-bar-item" style="float: right; cursor: pointer; padding: 8px" onclick="goHome();">
-        <i class="material-icons">home</i>
+      <span id="frames"></span>
+    </div>
+    <div class="w3-display-container" style="background-color: var(--secondary); padding: 10px; height: 80px;">
+      <a href="/" class="w3-display-left"><img class="navbar-logo" src="/falconlink_logo.png"></a>
+      <div class="w3-display-right">
+        <a href="games/" class="navbar-link"><i class="fa fa-gamepad navbar-icon"></i></a>
       </div>
     </div>
-    <span id="frames">
-    </span>
-  </div>
- 
-  <div class="w3-display-container" style="background-color: var(--secondary); padding: 10px; height: 80px;">
-    <a href="/" class="w3-display-left"><img class="navbar-logo" src="/falconlink_logo.png"></a>
-
-    <div class="w3-display-right">
-
-      <a href="games/" class="navbar-link"><i class="fa fa-gamepad navbar-icon"></i></a>
+    <div class="search-box w3-display-container">
+      <form id="uv-form" class="w3-display-middle">
+        <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden">
+        <p class="title">FalconLink</p>
+        <p class="subtitle">THE BEST WEB PROXY</p>
+        <div class="centerinput">
+          <input id="uv-address" autocomplete="off" class="w3-input" type="text" placeholder="Search the web">
+        </div>
+      </form>
     </div>
-  </div>
-
-  <div class="search-box w3-display-container">
-    <form id="uv-form" class="w3-display-middle">
-      <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
-      <p class="title">FalconLink</p>
-      <p class="subtitle">THE BEST WEB PROXY</p>
-      <div class="centerinput">
-      <input id="uv-address" autocomplete="off" class="w3-input" type="text" placeholder="Search the web" />
-    </div>
-    </form>
-  </div>
-  <script src="browser.js"></script>
+    <script src="browser.js"></script>
   </div>
   <div class="loadcenter">
-  <div class="loading-container" id="hide">
-    <div class="loading-text">
-      <span>L</span>
-      <span>O</span>
-      <span>A</span>
-      <span>D</span>
-      <span>I</span>
-      <span>N</span>
-      <span>G</span>
+    <div class="loading-container" id="hide">
+      <div class="loading-text">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+      </div>
     </div>
   </div>
-</div>
-  </body>
-
+</body>
 </html>
