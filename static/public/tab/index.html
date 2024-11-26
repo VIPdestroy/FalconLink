@@ -1,37 +1,34 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rizz Proxy</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Freeman&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" content="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index.css">
+    <script src="/uv/uv.bundle.js" defer></script>
+    <script src="/uv/uv.config.js" defer></script>
+    <script src="/register-sw.js" defer></script>
+    <script src="/search.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="/global/all.js" defer></script>
 </head>
-<script src="/uv/uv.bundle.js" defer></script>
-<script src="/uv/uv.config.js" defer></script>
-<script src="/register-sw.js" defer></script>
-<script src="/search.js" defer></script>
-<script src="index.js" defer></script>
-<script src="/global/all.js" defer></script>
-</head>
-
 <body>
     <div id="proxy-nav-bar" class="w3-bar">
-        <div class="w3-bar-item proxy-nav-bar-item" style="float: left; cursor: pointer; width: 24px;"
-            onclick="goBack()">
+        <div class="w3-bar-item proxy-nav-bar-item" style="float: left; cursor: pointer; width: 24px;" onclick="goBack()">
             <i class="material-icons">arrow_back</i>
         </div>
-        <div class="w3-bar-item proxy-nav-bar-item" style="float: left; cursor: pointer; width: 24px;"
-            onclick="goForward()">
+        <div class="w3-bar-item proxy-nav-bar-item" style="float: left; cursor: pointer; width: 24px;" onclick="goForward()">
             <i class="material-icons">arrow_forward</i>
         </div>
-        <div class="w3-bar-item proxy-nav-bar-item" style="float: left; cursor: pointer; width: 24px;"
-            onclick="reloadPage()">
+        <div class="w3-bar-item proxy-nav-bar-item" style="float: left; cursor: pointer; width: 24px;" onclick="reloadPage()">
             <i class="material-icons">refresh</i>
         </div>
         <div class="w3-bar-item proxy-nav-bar-item" style="float: left; cursor: default; width: 24px;">
@@ -44,19 +41,16 @@
                 <input id="uv-start-page" value="https://google.com" type="hidden">
             </form>
         </div>
-
-        <div class="w3-bar-item proxy-nav-bar-item" style="float: right; cursor: pointer; padding: 8px;"
-            onclick="windowPopout();">
+        <div class="w3-bar-item proxy-nav-bar-item" style="float: right; cursor: pointer; padding: 8px;" onclick="windowPopout();">
             <i class="material-icons">open_in_new</i>
         </div>
-        <div class="w3-bar-item proxy-nav-bar-item" style="float: right; cursor: pointer; padding: 8px;"
-            onclick="openEruda();">
+        <div class="w3-bar-item proxy-nav-bar-item" style="float: right; cursor: pointer; padding: 8px;" onclick="openEruda();">
             <i class="material-icons">code</i>
         </div>
-        <div class="w3-bar-item proxy-nav-bar-item" style="float: right; cursor: pointer; padding: 8px;"
-            onclick="proxyFullscreen();">
+        <div class="w3-bar-item proxy-nav-bar-item" style="float: right; cursor: pointer; padding: 8px;" onclick="proxyFullscreen();">
             <i class="material-icons">fullscreen</i>
         </div>
     </div>
     <iframe id="uv-frame"></iframe>
 </body>
+</html>
